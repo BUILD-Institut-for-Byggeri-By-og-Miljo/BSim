@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "gitbook-plugin-head-append": "^1.1.1",
+    "gitbook-plugin-language-picker": "^0.1.0",
+    "honkit": "^6.0.3"
+  },
+  "scripts": {
+    "build": "honkit build",
+    "serve": "honkit serve"
+  }
+}
