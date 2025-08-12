@@ -3,8 +3,9 @@
     "pluginsConfig": {
        "head-append": {
         "code": [
-        "<SCRIPTTAG>window.MathJax = { tex: { inlineMath: [[\"$\",\"$\"],[\"\\\\(\",\"\\\\)\"]] } };</SCRIPTTAG>",
-        "<SCRIPTTAG id=\"MathJax-script\" async src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js\"></SCRIPTTAG>"
+      "<SCRIPTTAG>window.MathJax = { tex: { inlineMath: [[\"\\\\(\",\"\\\\)\"]], packages: {'[+]': ['ams']}, processEscapes: true }, options: { skipHtmlTags: [\"script\",\"noscript\",\"style\",\"textarea\",\"pre\",\"code\"] } };</SCRIPTTAG>",
+      "<SCRIPTTAG id=\"MathJax-script\" src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js\"></SCRIPTTAG>",
+      "<SCRIPTTAG>(function(){function cleanNBSP(root){var t=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null,false);var n;while((n=t.nextNode())){if(n.nodeValue.indexOf('\\u00A0')!==-1){n.nodeValue=n.nodeValue.replace(/\\u00A0/g,' ');}}}function ts(){if(window.MathJax&&window.MathJax.typesetPromise){cleanNBSP(document.body);return window.MathJax.typesetPromise();}}function bind(){if(window.gitbook&&gitbook.events){gitbook.events.bind('page.change',ts);}document.addEventListener('DOMContentLoaded',ts);}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',bind);}else{bind();}})();</SCRIPTTAG>"
     ]
     }
     }

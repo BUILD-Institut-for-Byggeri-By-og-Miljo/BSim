@@ -61,12 +61,15 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="Diverse/test1.html" />
     
-    <link rel="prev" href="./" />
+    
+    <link rel="prev" href="Diverse/test2.html" />
     
 
-<script>window.MathJax = { tex: { inlineMath: [["$","$"],["\\(","\\)"]] } };</script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>window.MathJax = { tex: { inlineMath: [["\\(","\\)"]], packages: {'[+]': ['ams']}, processEscapes: true }, options: { skipHtmlTags: ["script","noscript","style","textarea","pre","code"] } };</script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+<script>(function(){function cleanNBSP(root){var t=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null,false);var n;while((n=t.nextNode())){if(n.nodeValue.indexOf('\u00A0')!==-1){n.nodeValue=n.nodeValue.replace(/\u00A0/g,' ');}}}function ts(){if(window.MathJax&&window.MathJax.typesetPromise){cleanNBSP(document.body);return window.MathJax.typesetPromise();}}function bind(){if(window.gitbook&&gitbook.events){gitbook.events.bind('page.change',ts);}document.addEventListener('DOMContentLoaded',ts);}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',bind);}else{bind();}})();</script>
 
     </head>
     <body>
@@ -92,6 +95,8 @@
 
     
         
+        <li class="header">DIVERSE</li>
+        
         
     
         <li class="chapter " data-level="1.1" data-path="./">
@@ -99,7 +104,7 @@
                 <a href="./">
             
                     
-                    Introduktion
+                    Introduction
             
                 </a>
             
@@ -107,7 +112,34 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="EFFECTIVEMOISTURE.html">
+        <li class="chapter " data-level="1.2" data-path="Diverse/test1.html">
+            
+                <a href="Diverse/test1.html">
+            
+                    
+                    Test1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Diverse/test2.html">
+            
+                <a href="Diverse/test2.html">
+            
+                    
+                    Test2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="EFFECTIVEMOISTURE.html">
             
                 <a href="EFFECTIVEMOISTURE.html">
             
@@ -117,6 +149,63 @@
                 </a>
             
 
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Moduler</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Diverse/test1.html">
+            
+                <a href="Diverse/test1.html">
+            
+                    
+                    Test1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Diverse/test2.html">
+            
+                <a href="Diverse/test2.html">
+            
+                    
+                    Test2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.2.1" data-path="EFFECTIVEMOISTURE.html">
+            
+                <a href="EFFECTIVEMOISTURE.html">
+            
+                    
+                    TEST
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -168,6 +257,11 @@
                                 <h1 id="effective-moisture-penetration-depth-and-automatic-grid-generation-in-bsim-for-moisture-calculations">Effective Moisture Penetration Depth, and Automatic Grid Generation in BSim for Moisture Calculations</h1>
 <p>Carsten Rode<br></br>Institute for Buildings and Energy (BYGDTU)<br></br>Technical University of Denmark<br></br><a href="https://construct.dtu.dk/" target="_blank">www.byg.dtu.dk</a><br></br>June 2002</p>
 <p>When using BSim for prediction of indoor humidity levels when considering moisture buffering in adjacent building materials, it is necessary to use rather fine layers (control volumes) in the calculation of the materials next to the indoor air. This note will set up the theory for the automatic grid generation mechanism.</p>
+<p>Inline check: (t<em>p), (s</em>{36.7\%}), (u<em>{60\%}-u</em>{40\%}), (10^{-5}).</p>
+<p>Block check:</p>
+<p>$$
+\omega = \frac{2\pi}{t_p} \tag{5}</p>
+<p>$$</p>
 <h4 id="effective-moisture-penetration-depth"><strong>Effective Moisture Penetration Depth</strong></h4>
 <p>For sinusoidal variation of the surface moisture content of a material, the amplitude of the variation at a certain depth in the material can be found as:</p>
 <p>$$ \frac{u - u_\infty}{\Delta u} = e^{ \sqrt[-5]{ \frac{\omega}{2 D} } } \tag{1} $$</p>
@@ -181,24 +275,44 @@
 <p>The moisture diffusivity of the material can be found from the following other material properties:</p>
 <p>$$ D = \frac{ \delta \cdot p_s }{ \rho_0 \cdot \xi } \tag{4} $$</p>
 <p>where:</p>
-<p>( \delta )            is the water vapour permeability, kg/(m·s·Pa)<br></br>( p_s )           is the saturation vapour pressure (strongly temperature dependent), Pa<br></br>( \rho_0 )          is the dry density of the material, kg/m<br></br>( \xi )            is the specific moisture capacity of the material.</p>
+<p>( \delta )            is the water vapour permeability, kg/(m·s·Pa)
+( p_s )           is the saturation vapour pressure (strongly temperature dependent), Pa<br></br>( \rho_0 )          is the dry density of the material, kg/m<br></br>( \xi )            is the specific moisture capacity of the material.</p>
 <p>The angular frequency of the variation is:</p>
 <p>$$ \omega = \frac{2 \pi}{t_p} \tag{5} $$</p>
 <p>where:</p>
-<p>( t_p ) is the time period of one cyclic variation, s.</p>
-<p>Some of the parameters in the formulas written above are variable functions of the temperature or the humidity level, and also the time periodic of interest has to be chosen. For moisture penetration into walls and furnishing in contact with the indoor air the following choices will be made:</p>
+<p>( \delta ) is the water vapour permeability, kg/(m·s·Pa)<br></br>( p_s ) is the saturation vapour pressure (strongly temperature dependent), Pa<br></br>( \rho_0 ) is the dry density of the material, kg/m<br></br>( \xi ) is the specific moisture capacity of the material.</p>
+<p>The angular frequency of the variation is:</p>
+<p>$$
+\omega = \frac{2 \pi}{t_p} \tag{5}</p>
+<p>$$</p>
+<p>where:</p>
+<p>( \delta ) is the water vapour permeability, kg/(m·s·Pa)<br></br>( p_s ) is the saturation vapour pressure (strongly temperature dependent), Pa<br></br>( \rho_0 ) is the dry density of the material, kg/m<br></br>( \xi ) is the specific moisture capacity of the material.</p>
+<p>The angular frequency of the variation is:</p>
+<p>$$
+\omega = \frac{2\pi}{t_p} \tag{5}</p>
+<p>$$</p>
+<p>where:</p>
+<p>( t_p ) is the time period of one cyclic variation, (\mathrm{s}).</p>
+<p>Some of the parameters in the formulas written above are variable functions of the temperature or the humidity level, and also the time period of interest has to be chosen. For moisture penetration into walls and furnishing in contact with the indoor air the following choices will be made:</p>
 <ul>
-<li><p>Interesting temperatures are around 20 °C, so the saturation vapour pressure is 2340 Pa.</p>
+<li><p>Interesting temperatures are around (20^\circ\mathrm{C}), so the saturation vapour pressure is (2340\,\mathrm{Pa}).</p>
 </li>
-<li><p>The indoor humidity variation is around 50 % RH, so for the vapour permeability and the specific moisture capacity of the materials values will be chosen for the materials when they are in equilibrium with 50 % RH. The specific moisture capacity (slope of the sorption curve) can be calculated from the sorption curve values at 40 and 60 % RH:</p>
+<li><p>The indoor humidity variation is around (50\%\ \mathrm{RH}), so for the vapour permeability and the specific moisture capacity of the materials, values will be chosen for the materials when they are in equilibrium with (50\%\ \mathrm{RH}). The specific moisture capacity (slope of the sorption curve) can be calculated from the sorption curve values at (40\%) and (60\%\ \mathrm{RH}):</p>
 </li>
 </ul>
-<p>$$ \xi = \frac{ u<em>{60\%} - u</em>{40\%} }{ 0.20 } \tag{6} $$</p>
+<p>$$
+\xi = \frac{u<em>{60\%} - u</em>{40\%}}{0.20} \tag{6}</p>
+<p>$$</p>
 <ul>
-<li>Of interest are daily variations, so ( t_p ) will be 24 h (86400 s), and w will be 7.3·10<sup>-5</sup> s<sup>-1</sup>.</li>
+<li>Of interest are daily variations, so ( t_p = 24\,\mathrm{h} = 86400\,\mathrm{s} ), and (\omega = 7.3 \times 10^{-5}\,\mathrm{s}^{-1}).</li>
 </ul>
-<p>With these assumptions and definitions of D and ω inserted, ( s_{36.7\%} ) can be calculated as:</p>
-<p>$$  s<em>{36.7\%} = \sqrt{ \frac{2 D \cdot t_i}{2\pi} } = \sqrt{ \frac{\delta \cdot p_s \cdot t_p}{\pi \cdot \rho_0\cdot \xi} } = 3590 \sqrt{ \frac{\delta</em>{50\%}}{\rho<em>0 \cdot (u</em>{60} - u_{40})} } \tag{7} $$</p>
+<p>With these assumptions and definitions of (D) and (\omega) inserted, ( s_{\mathrm{36.7\%}} ) can be calculated as:</p>
+<p>$$
+s<em>{\mathrm{36.7\%}}
+= \sqrt{\frac{2 D\, t_p}{2\pi}}
+= \sqrt{\frac{\delta\, p_s\, t_p}{\pi\, \rho_0\, \xi}}
+= 3590\, \sqrt{\frac{\delta</em>{50\%}}{\rho<em>0 \,\bigl(u</em>{60\%} - u_{40\%}\bigr)}} \tag{7}</p>
+<p>$$</p>
 <p><style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -334,11 +448,296 @@ Depth, \( s_{36.7\%} \)
 </table>
 
 
-
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Test</th>
+<th style="text-align:center">test</th>
+<th style="text-align:center">test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://s3.amazonaws.com/outseta-production/10526/0-06503c65ac922b3393247c393c926a2bb6d9166f_dcb1d5ed-370f-402a-bcbe-101b773442db.png" alt="Visualisering af brugerfladen i BSim"></img> <em> Test dffadvdaa. as dasda f </em></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">f</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">f</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">f</td>
+</tr>
+</tbody>
+</table>
 <p>( s_{1\%} ) can be calculated from the values in the last column of the table by dividing them with 4.61.</p>
 <h4 id="automatic-grid-generation-in-bsim"><strong>Automatic grid generation in BSim</strong></h4>
 <p>All of the above material properties can be taken from the already existing data in <em>BSim</em> (if moisture data are available in the material’s database for the relevant materials). For the calculation grid of materials next to an indoor climate, and if moisture calculations are chosen in <em>BSim,</em> it is suggested to use a grid, where the first control volume next to the indoor climate has a thickness of, say, 25 % of ( s<em>{36,7\%} ). Then, the grid should be expanding so that the second control volume is, say, 1.5 times the thickness of the first, the third control volume is 1.5 times the thickness of the second, and so forth. The distribution of control volume widths should be made once before the calculation starts (or when setting up the model). Of course, the last control volume of a layer should have the largest thickness of all its control volumes, but so that the total thickness of the layer becomes what it is supposed to be. So some appropriate mechanism for rounding the last one or two thicknesses would be required. The value proposed above for the thickness of the first control volume as a percentage of ( s</em>{36,7\%} ) should be a number that can be set by the user (25 % might be the default), and similarly for the expansion coefficient from one control volume to the next (the factor 1.5). It should be possible for the user to see (for control purposes) the automatically generated grid distribution. When calculations are made, it should preferably be possible for the user to save the results for the individual control volumes of a layer, e.g. by "sublayering" of layers next to an indoor climate.</p>
 <p>The expanding grid generation should only be carried out for layers that are adjacent to an indoor climate (i.e. not for the layers in the middle of, or on the exterior side of a construction).</p>
+<h1 id="simdb---buildingmaterial-frame">SimDB - BuildingMaterial, Frame</h1>
+<div id="da">
+
+Dette faneblad indeholder alene en U-værdi og fremkommer kun, når der er valgt materialer fra en af [SfB-materialegrupperne](https://bsim.outseta.com/support/kb/articles/DQ2xwBWV/sfb-i-bsim) "b" eller "c". Værdien benyttes, hvis materialet indgår som en ramme-/karmkonstruktion (*frame*) eller en fyldning (*panel*) i en WinDoor.
+
+![U-værdien for en ramme-/karmkonstruktion (Edit Material | Frame) eller en fyldning. Benyttes, når materialet indgår som en del af en WinDoor.](https://s3.amazonaws.com/outseta-production/10526/0-DBFRAME_a43bfc67-676c-4230-8ebc-3751c64fa042.GIF)
+
+I henhold til [DS418, tillæg 1](https://bsim.outseta.com/support/kb/articles/A93zbqQ0/litteratur) kan følgende værdier benyttes for U-værdien af vinduesrammer.
+
+For rammer og karme af træ eller beklædt træ anvendes transmissionskoefficienten angivet i nedenstående figur, medmindre der er bestemt en nøjagtigere værdi. Ved bestemmelse af tykkelsen af rammer og karme af træ ses der bort fra eventuelle inddækninger af metal eller plast. ved forskellig tykkelse af fx ramme og karm anvendes middelværdien. Ved koblede rammer anvendes den samlede tykkelse af rammerne.
+
+![Transmissionskoefficient U_ramme i W/m2K for rammer og karme af træ og beklædt træ.](https://s3.amazonaws.com/outseta-production/10526/0-U-FRAME_940167a3-b83b-46c2-a094-54fa2ac2556b.GIF)
+
+For rammer og karme af plast eller metal anvendes transmissionskoefficienterne angives i følgende tabel, medmindre der er bestemt en nøjagtigere værdi. For PUR-profiler forudsættes metalforstærkningen dækket af mindst 5 mm polyuretanskum. Ved PVC-profiler forudsættes, at der højst er metalforstærkning i ét kammer, og at afstanden mellem vægoverfladerne i alle kamre er mindst 5 mm. Transmissionskoefficienten for metalprofiler med brudt kuldebro afhænger meget af detailudformningen og må derfor bestemmes specifikt for det enkelte profil.
+
+</div>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-3xi5{background-color:#ffffff;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-c6of{background-color:#ffffff;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<div>
+<div> </div>
+</div>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-o5v9{background-color:#ffffff;border-color:inherit;color:#333333;text-align:left;vertical-align:top}
+.tg .tg-ncgp{background-color:#ffffff;border-color:inherit;color:#333333;text-align:center;vertical-align:top}
+.tg .tg-7euo{background-color:#ffffff;color:#333333;text-align:left;vertical-align:top}
+</style>
+<div id="da">
+<table class="tg" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th class="tg-ncgp" style="text-align: center;"><span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;"> </span></span></th>
+<th class="tg-o5v9" style="text-align: center;"><span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">W/m²K</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-o5v9">
+
+<span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">Plastprofiler </span></span>
+
+*   <span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">PUR-profiler   
+</span></span>
+
+*   <span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">2-kammer PVC-profiler</span></span>
+
+*   <span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">3-kammer PVC-profiler</span></span>
+
+</td>
+<td class="tg-o5v9">
+
+
+
+<span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">2,6  
+2,1  
+1,9</span></span>
+
+</td>
+</tr>
+<tr>
+<td class="tg-7euo">
+
+<span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">Metalprofiler </span></span>
+
+*   <span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">uden brudt kuldebro   
+</span></span>
+
+</td>
+<td class="tg-7euo" style="text-align: center;">
+
+5,9<span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">  
+</span></span>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+*Transmissionskoefficient* *U<sub>ramme  </sub>i W/m²K for rammer og karme af plast- eller metalprofiler*.
+
+For vinduer med selvstændige rammer og en afstand mellem rammerne på mindst 10 mm beregnes transmissionskoefficienten som:
+
+![](https://s3.amazonaws.com/outseta-production/10526/0-UFrame_f996489f-5a03-40fa-9944-b400a575b43a.GIF)
+
+hvor *U<sub>u</sub>*  og *U<sub>i</sub>*  er transmissionskoefficienten for henholdsvis den udvendige og den indvendige del af vinduet.
+
+
+
+Se også:
+
+*   [Faneblad Material](https://help.bsim.dk/support/kb/articles/4966z49X/simdb---buildingmaterial-material)
+
+*   [Faneblad Moisture](https://help.bsim.dk/support/kb/articles/wQXx4nQK/simdb---buildingmaterial-moisture)
+
+*   [Faneblad Thermal](https://help.bsim.dk/support/kb/articles/y9q8b2QA/simdb---buildingmaterial-thermal)
+
+*   [Faneblad Environment](https://help.bsim.dk/support/kb/articles/nmDBzx9y/simdb---buildingmaterial-environment)
+
+*   [Faneblad Glazing](https://help.bsim.dk/support/kb/articles/7maw2j9E/simdb---buildingmaterial-glazing)
+
+*   [Faneblad UserDefined](https://help.bsim.dk/support/kb/articles/xmerM5QV/simdb---buildingmaterial-userdefined)
+
+*   [Faneblad Frame](https://help.bsim.dk/support/kb/articles/ZmNreEm2/simdb---buildingmaterial-frame)
+
+
+
+</div>
+
+
+
+
+
+
+
+<div id="en">
+
+This tab only contains a U-value and only appears when materials from [SfB](https://bsim.outseta.com/support/kb/articles/DQ2xwBWV/sfb-i-bsim) material groups "b" or "c" have been selected. The value is used if the material forms part of a WinDoor as a frame construction or panel.
+
+![U-value for a frame construction or panel. Used when the material forms part of a WinDoor.](https://s3.amazonaws.com/outseta-production/10526/0-dbframe_b679b150-bc46-4d11-af92-15989150fe4b.gif)
+
+According to the Danish norm [DS418, amendment 1](https://bsim.outseta.com/support/kb/articles/A93zbqQ0/litteratur) the following values can be used as U-values for window frames.
+
+For frames made of wood or covered wood the values can be obtained from the figure below, as a function of the type of wood and the thickness of the frame. This values can be used if a more accurate value is not known. By determining the thickness of frame made of wood, an eventual cover made of metal or plastic is neglected. If the frame have varying thickness, the average value can be used. Having coupled frames (two or more separate glazings) the total thickness of the frame can be used.
+
+![Transmission coefficient Uframe in W/m2K for frames made of wood or covered wood.](https://s3.amazonaws.com/outseta-production/10526/0-u-frame_e326dc87-5e9c-45fa-af83-0402b79fb183.gif)
+
+For frames made of plastic or metal the transmission coefficients given in the following table can be used, unless a more accurate value is known. For PUR-profilers a metal bearing is expected to be covered wit at least 5 mm polyuretan foam. For PVC-profiles it is anticipated that there will be metal enforcement in a maximum of one chamber, and that the distance between the surface in all chambers is at least 5 mm. The transmission coefficient for metal profiles with broken cold-bridge depends strongly on the actual design and must thus be determined for each profile individually.
+
+</div>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-3xi5{background-color:#ffffff;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-c6of{background-color:#ffffff;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<div>
+<div> </div>
+</div>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-o5v9{background-color:#ffffff;border-color:inherit;color:#333333;text-align:left;vertical-align:top}
+.tg .tg-ncgp{background-color:#ffffff;border-color:inherit;color:#333333;text-align:center;vertical-align:top}
+.tg .tg-7euo{background-color:#ffffff;color:#333333;text-align:left;vertical-align:top}
+</style>
+<div id="en">
+<table class="tg" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th class="tg-ncgp" style="text-align: center;"><span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;"> </span></span></th>
+<th class="tg-o5v9" style="text-align: center;"><span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">W/m²K</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-o5v9">
+
+Plastic profiles
+
+*   <span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">PUR-profilers   
+</span></span>
+
+*   <span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">2-chamber PVC-profiles   
+</span></span>
+
+*   <span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">3-chamber PVC-profiles   
+</span></span>
+
+</td>
+<td class="tg-o5v9">
+
+
+
+<span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">2,6  
+2,1  
+1,9</span></span>
+
+</td>
+</tr>
+<tr>
+<td class="tg-7euo">
+
+Metal profiles
+
+*   <span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">without broken cold bridge</span></span>
+
+</td>
+<td class="tg-7euo" style="text-align: center;">
+
+5,9<span style="color: #200024; font-family: Arial;"><span style="font-size: 15px;">  
+</span></span>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+*Transmission coefficient U<sub>frame </sub>in W/m²K for frames made of plastic or metal profiles.*
+
+For windows with individual frames and a distance of at least 10 mm between the frames, the transmission coefficient can be calculated as:
+
+![](https://s3.amazonaws.com/outseta-production/10526/0-UFrame_f996489f-5a03-40fa-9944-b400a575b43a.GIF)
+
+where *U<sub>u</sub>* and *U<sub>i</sub>* is the transmission coefficient for respectively the external and the internal part of the window.
+
+
+
+See also:
+
+*   [Tab Material](https://help.bsim.dk/support/kb/articles/4966z49X/simdb---buildingmaterial-material)
+
+*   [Tab Thermal](https://help.bsim.dk/support/kb/articles/y9q8b2QA/simdb---buildingmaterial-thermal)
+
+*   [Tab Moisture](https://help.bsim.dk/support/kb/articles/wQXx4nQK/simdb---buildingmaterial-moisture)
+
+*   [Tab Environment](https://help.bsim.dk/support/kb/articles/nmDBzx9y/simdb---buildingmaterial-environment)
+
+*   [Tab Glazing](https://help.bsim.dk/support/kb/articles/7maw2j9E/simdb---buildingmaterial-glazing)
+
+*   [Tab UserDefined](https://help.bsim.dk/support/kb/articles/xmerM5QV/simdb---buildingmaterial-userdefined)
+
+*   [Tab Frame](https://help.bsim.dk/support/kb/articles/ZmNreEm2/simdb---buildingmaterial-frame)
+
+</div>
+
+
 
                                 
                                 </section>
@@ -366,10 +765,14 @@ Depth, \( s_{36.7\%} \)
 
             
                 
-                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduktion">
+                <a href="Diverse/test2.html" class="navigation navigation-prev " aria-label="Previous page: Test2">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="Diverse/test1.html" class="navigation navigation-next " aria-label="Next page: Test1">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -378,7 +781,7 @@ Depth, \( s_{36.7\%} \)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TEST","level":"1.2","depth":1,"previous":{"title":"Introduktion","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git","head-append"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"head-append":{"code":["<SCRIPTTAG>window.MathJax = { tex: { inlineMath: [[\"$\",\"$\"],[\"\\\\(\",\"\\\\)\"]] } };</SCRIPTTAG>","<SCRIPTTAG id=\"MathJax-script\" async src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js\"></SCRIPTTAG>"]},"language-picker":{"grid-columns":3},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"da","gitbook":"*"},"file":{"path":"EFFECTIVEMOISTURE.md","mtime":"2025-08-12T09:53:24.422Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-08-12T10:03:21.821Z"},"basePath":".","book":{"language":"da"}});
+            gitbook.page.hasChanged({"page":{"title":"TEST","level":"1.3.1","depth":2,"next":{"title":"Test1","level":"2.1","depth":1,"path":"Diverse/test1.md","ref":"Diverse/test1.md","articles":[]},"previous":{"title":"Test2","level":"1.3","depth":1,"path":"Diverse/test2.md","ref":"Diverse/test2.md","articles":[{"title":"TEST","level":"1.3.1","depth":2,"path":"EFFECTIVEMOISTURE.md","ref":"EFFECTIVEMOISTURE.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git","head-append"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"head-append":{"code":["<SCRIPTTAG>window.MathJax = { tex: { inlineMath: [[\"\\\\(\",\"\\\\)\"]], packages: {'[+]': ['ams']}, processEscapes: true }, options: { skipHtmlTags: [\"script\",\"noscript\",\"style\",\"textarea\",\"pre\",\"code\"] } };</SCRIPTTAG>","<SCRIPTTAG id=\"MathJax-script\" src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js\"></SCRIPTTAG>","<SCRIPTTAG>(function(){function cleanNBSP(root){var t=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null,false);var n;while((n=t.nextNode())){if(n.nodeValue.indexOf('\\u00A0')!==-1){n.nodeValue=n.nodeValue.replace(/\\u00A0/g,' ');}}}function ts(){if(window.MathJax&&window.MathJax.typesetPromise){cleanNBSP(document.body);return window.MathJax.typesetPromise();}}function bind(){if(window.gitbook&&gitbook.events){gitbook.events.bind('page.change',ts);}document.addEventListener('DOMContentLoaded',ts);}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',bind);}else{bind();}})();</SCRIPTTAG>"]},"language-picker":{"grid-columns":3},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"da","gitbook":"*"},"file":{"path":"EFFECTIVEMOISTURE.md","mtime":"2025-08-12T12:23:49.124Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-08-12T12:47:32.252Z"},"basePath":".","book":{"language":"da"}});
         });
     </script>
 </div>

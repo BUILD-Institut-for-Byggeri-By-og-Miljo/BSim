@@ -1,4 +1,4 @@
 # Languages
 
 * [English](en/)
-* [Danish](da/)
+* [Dansk](da/)
