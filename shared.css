@@ -1,0 +1,13 @@
+#center_img {
+  text-align: center;
+}
+
+#center_img img {
+  max-width: 300px; /* optional */
+}
+
+#center_img figcaption {
+  margin-top: 0.5em;
+  font-style: italic;
+  color: #555;
+}

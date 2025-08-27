@@ -5,7 +5,7 @@ Technical University of Denmark
 [www.byg.dtu.dk](https://construct.dtu.dk/)  
 June 2002
 
-When using BSim for prediction of indoor humidity levels when considering moisture buffering in adjacent building materials, it is necessary to use rather fine layers (control volumes) in the calculation of the materials next to the indoor air. This note will set up the theory for the automatic grid generation mechanism.
+[When](#simdb---buildingmaterial-frame) using BSim for prediction of indoor humidity levels when considering moisture buffering in adjacent building materials, it is necessary to use rather fine layers (control volumes) in the calculation of the materials next to the indoor air. This note will set up the theory for the automatic grid generation mechanism.
 
 Inline check: \(t_p\), \(s_{36.7\%}\), \(u_{60\%}-u_{40\%}\), \(10^{-5}\).
 
@@ -86,7 +86,7 @@ where:
 
 \( t_p \) is the time period of one cyclic variation, \(\mathrm{s}\).
 
-Some of the parameters in the formulas written above are variable functions of the temperature or the humidity level, and also the time period of interest has to be chosen. For moisture penetration into walls and furnishing in contact with the indoor air the following choices will be made:
+<a name="anchor"> </a> Some of the parameters in the formulas written above are variable functions of the temperature or the humidity level, and also the time period of interest has to be chosen. For moisture penetration into walls and furnishing in contact with the indoor air the following choices will be made:
 
 * Interesting temperatures are around \(20^\circ\mathrm{C}\), so the saturation vapour pressure is \(2340\,\mathrm{Pa}\).
 
