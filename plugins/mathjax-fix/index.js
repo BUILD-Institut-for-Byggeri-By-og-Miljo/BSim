@@ -43,7 +43,7 @@ module.exports = {
                     return match;
                 }
                 const trimmed = formula.trim();
-                return `<script type=\"math/tex; mode=display\">\n${trimmed}\n</script>`;
+                return `<span class=\"mathjax-block\">\\[\n${trimmed}\n\\]</span>`;
             });
 
             html = html.replace(/@@MATHJAX-INLINE-(\d+)@@/g, function(match, index) {
