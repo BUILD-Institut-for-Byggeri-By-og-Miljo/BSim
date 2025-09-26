@@ -24,6 +24,11 @@ module.exports = {
                 return inlinePlaceholder(index);
             });
 
+            content = content.replace(/\$(.+?)\$/g, function(match, formula) {
+                const index = store.inlines.push(formula) - 1;
+                return inlinePlaceholder(index);
+            });
+
             placeholderStore.set(page.path, store);
             page.content = content;
             return page;

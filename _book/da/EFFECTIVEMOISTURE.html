@@ -56,7 +56,7 @@
     <link rel="next" href="Diverse/test2.html" />
     
     
-    <link rel="prev" href="Diverse/test2.html" />
+    <link rel="prev" href="Moduler/20_04_Fugtbalancen_for_en_zone.html" />
     
 
 <script>window.MathJax = { tex: { inlineMath: [[\"\\\(\",\"\\\)\"],[\"$\",\"$\"]], displayMath: [[\"\\\[\",\"\\\]\"],[\"$$\",\"$$\"]], packages: {'[+]': ['ams']}, processEscapes: true }, options: { skipHtmlTags: [\"script\",\"noscript\",\"style\",\"textarea\",\"pre\",\"code\"] } };</script>
@@ -129,10 +129,23 @@
             
 
             
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Moduler/20_04_Fugtbalancen_for_en_zone.html">
+            
+                <a href="Moduler/20_04_Fugtbalancen_for_en_zone.html">
+            
+                    
+                    Test_Anders
+            
+                </a>
+            
+
+            
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="EFFECTIVEMOISTURE.html">
+        <li class="chapter active" data-level="1.4.1" data-path="EFFECTIVEMOISTURE.html">
             
                 <a href="EFFECTIVEMOISTURE.html">
             
@@ -146,7 +159,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1.1" data-path="Diverse/test2.html">
+        <li class="chapter " data-level="1.4.1.1" data-path="Diverse/test2.html">
             
                 <a href="Diverse/test2.html">
             
@@ -252,48 +265,48 @@
 <p><a href="#simdb---buildingmaterial-frame">When</a> using BSim for prediction of indoor humidity levels when considering moisture buffering in adjacent building materials, it is necessary to use rather fine layers (control volumes) in the calculation of the materials next to the indoor air. This note will set up the theory for the automatic grid generation mechanism.</p>
 <p>Inline check: \(t_p\), \(s_{36.7\%}\), \(u_{60\%}-u_{40\%}\), \(10^{-5}\).</p>
 <p>Block check:
-<script type="math/tex; mode=display">
+<span class="mathjax-block">\[
 \omega = \frac{2\pi}{t_p} \tag{5}
-</script></p>
+\]</span></p>
 <h4 id="effective-moisture-penetration-depth"><strong>Effective Moisture Penetration Depth</strong></h4>
 <p>For sinusoidal variation of the surface moisture content of a material, the amplitude of the variation at a certain depth in the material can be found as:</p>
-<p><script type="math/tex; mode=display">
+<p><span class="mathjax-block">\[
 \frac{u - u_\infty}{\Delta u} = e^{ \sqrt[-5]{ \frac{\omega}{2 D} } } \tag{1}
-</script></p>
+\]</span></p>
 <p>where:</p>
 <p>\( u \)              is the peak value of the varying moisture content at a certain depth, kg/kg<br></br>\( u_\infty \)       is the moisture content deep into the material (the mean value of the sinusoidal variation), kg/kg<br></br>\( \Delta u \)      is the amplitude of the moisture content’s variation at the surface, kg/kg<br></br>\( s \)              is the depth into the material, m<br></br>\( \omega \)       is the angular frequency of the variations, s<sup>-1</sup><br></br>\( D \)             is the moisture diffusivity of the material, m²/s.</p>
 <p>The depth at which there is only 1% variation in moisture content of the variation imposed at the surface can be determined, and can be understood as the Effective Moisture Penetration Depth, <em>s<sub>1%</sub>.</em> It can be found by putting  \( \frac{u - u_\infty}{\Delta u} \) equal to 0.01 (1%). Thus, \( 4.61 = s_{1\%} \sqrt{\frac{\omega}{2 D}} \), and consequently:</p>
-<p><script type="math/tex; mode=display">
+<p><span class="mathjax-block">\[
 s_{1\%} = 4.61 \sqrt{ \frac{2 D}{\omega} } \tag{2}
-</script></p>
+\]</span></p>
 <p>1 %, of course, is an arbitrary choice. Quite often, researchers have defined the moisture penetration depth from a similar equation by neglecting the coefficient, 4.61, before the square root:</p>
-<p><script type="math/tex; mode=display">
+<p><span class="mathjax-block">\[
 s_{36.7\%} = \sqrt{ \frac{2 D}{\omega} }&nbsp;\tag{3}
-</script></p>
+\]</span></p>
 <p>This depth is indeed, as indicated, a 36.7 % criterion for the determination of the penetration depth, i.e. at this depth the amplitude of moisture content variation is 36.7 % of the amplitude at the surface.</p>
 <p>The moisture diffusivity of the material can be found from the following other material properties:</p>
-<p><script type="math/tex; mode=display">
+<p><span class="mathjax-block">\[
 D = \frac{ \delta \cdot p_s }{ \rho_0 \cdot \xi } \tag{4}
-</script></p>
+\]</span></p>
 <p>where:</p>
 <p>\( \delta \)            is the water vapour permeability, kg/(m·s·Pa)
 \( p_s \)           is the saturation vapour pressure (strongly temperature dependent), Pa<br></br>\( \rho_0 \)          is the dry density of the material, kg/m<br></br>\( \xi \)            is the specific moisture capacity of the material.</p>
 <p>The angular frequency of the variation is:</p>
-<p><script type="math/tex; mode=display">
+<p><span class="mathjax-block">\[
 \omega = \frac{2 \pi}{t_p}&nbsp;\tag{5}
-</script></p>
+\]</span></p>
 <p>where:</p>
 <p>\( \delta \) is the water vapour permeability, kg/(m·s·Pa)<br></br>\( p_s \) is the saturation vapour pressure (strongly temperature dependent), Pa<br></br>\( \rho_0 \) is the dry density of the material, kg/m<br></br>\( \xi \) is the specific moisture capacity of the material.</p>
 <p>The angular frequency of the variation is:</p>
-<p><script type="math/tex; mode=display">
+<p><span class="mathjax-block">\[
 \omega = \frac{2 \pi}{t_p} \tag{5}
-</script></p>
+\]</span></p>
 <p>where:</p>
 <p>\( \delta \) is the water vapour permeability, kg/(m·s·Pa)<br></br>\( p_s \) is the saturation vapour pressure (strongly temperature dependent), Pa<br></br>\( \rho_0 \) is the dry density of the material, kg/m<br></br>\( \xi \) is the specific moisture capacity of the material.</p>
 <p>The angular frequency of the variation is:</p>
-<p><script type="math/tex; mode=display">
+<p><span class="mathjax-block">\[
 \omega = \frac{2\pi}{t_p} \tag{5}
-</script></p>
+\]</span></p>
 <p>where:</p>
 <p>\( t_p \) is the time period of one cyclic variation, \(\mathrm{s}\).</p>
 <p><a name="anchor"> </a> Some of the parameters in the formulas written above are variable functions of the temperature or the humidity level, and also the time period of interest has to be chosen. For moisture penetration into walls and furnishing in contact with the indoor air the following choices will be made:</p>
@@ -303,19 +316,19 @@ D = \frac{ \delta \cdot p_s }{ \rho_0 \cdot \xi } \tag{4}
 <li><p>The indoor humidity variation is around \(50\%\ \mathrm{RH}\), so for the vapour permeability and the specific moisture capacity of the materials, values will be chosen for the materials when they are in equilibrium with \(50\%\ \mathrm{RH}\). The specific moisture capacity (slope of the sorption curve) can be calculated from the sorption curve values at \(40\%\) and \(60\%\ \mathrm{RH}\):</p>
 </li>
 </ul>
-<p><script type="math/tex; mode=display">
+<p><span class="mathjax-block">\[
 \xi = \frac{u_{60\%} - u_{40\%}}{0.20} \tag{6}
-</script></p>
+\]</span></p>
 <ul>
 <li>Of interest are daily variations, so \( t_p = 24\,\mathrm{h} = 86400\,\mathrm{s} \), and \(\omega = 7.3 \times 10^{-5}\,\mathrm{s}^{-1}\).</li>
 </ul>
 <p>With these assumptions and definitions of \(D\) and \(\omega\) inserted, \( s_{\mathrm{36.7\%}} \) can be calculated as:</p>
-<p><script type="math/tex; mode=display">
+<p><span class="mathjax-block">\[
 s_{\mathrm{36.7\%}}
 = \sqrt{\frac{2 D\, t_p}{2\pi}}
 = \sqrt{\frac{\delta\, p_s\, t_p}{\pi\, \rho_0\, \xi}}
 = 3590\, \sqrt{\frac{\delta_{50\%}}{\rho_0 \,\bigl(u_{60\%} - u_{40\%}\bigr)}} \tag{7}
-</script></p>
+\]</span></p>
 <p><style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -768,7 +781,7 @@ See also:
 
             
                 
-                <a href="Diverse/test2.html" class="navigation navigation-prev " aria-label="Previous page: Test2">
+                <a href="Moduler/20_04_Fugtbalancen_for_en_zone.html" class="navigation navigation-prev " aria-label="Previous page: Test_Anders">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -784,7 +797,7 @@ See also:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TEST","level":"1.3.1","depth":2,"next":{"title":"TEST3","level":"1.3.1.1","depth":3,"path":"Diverse/test2.md","ref":"Diverse/test2.md","articles":[]},"previous":{"title":"Test2","level":"1.3","depth":1,"path":"Diverse/test2.md","ref":"Diverse/test2.md","articles":[{"title":"TEST","level":"1.3.1","depth":2,"path":"EFFECTIVEMOISTURE.md","ref":"EFFECTIVEMOISTURE.md","articles":[{"title":"TEST3","level":"1.3.1.1","depth":3,"path":"Diverse/test2.md","ref":"Diverse/test2.md","articles":[]}]}]},"articles":[{"title":"TEST3","level":"1.3.1.1","depth":3,"path":"Diverse/test2.md","ref":"Diverse/test2.md","articles":[]}],"dir":"ltr"},"config":{"plugins":["remove-honkit-footer","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git","mathjax-fix","head-append"],"styles":{"website":"styles.css"},"pluginsConfig":{"mathjax-fix":{},"language-picker":{"grid-columns":3},"livereload":{},"head-append":{"code":["<SCRIPTTAG>window.MathJax = { tex: { inlineMath: [[\\\"\\\\\\(\\\",\\\"\\\\\\)\\\"],[\\\"$\\\",\\\"$\\\"]], displayMath: [[\\\"\\\\\\[\\\",\\\"\\\\\\]\\\"],[\\\"$$\\\",\\\"$$\\\"]], packages: {'[+]': ['ams']}, processEscapes: true }, options: { skipHtmlTags: [\\\"script\\\",\\\"noscript\\\",\\\"style\\\",\\\"textarea\\\",\\\"pre\\\",\\\"code\\\"] } };</SCRIPTTAG>","<SCRIPTTAG id=\"MathJax-script\" src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js\"></SCRIPTTAG>","<SCRIPTTAG>(function(){function cleanNBSP(root){var t=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null,false);var n;while((n=t.nextNode())){if(n.nodeValue.indexOf('\\u00A0')!==-1){n.nodeValue=n.nodeValue.replace(/\\u00A0/g,' ');}}}function ts(){if(window.MathJax&&window.MathJax.typesetPromise){cleanNBSP(document.body);return window.MathJax.typesetPromise();}}function bind(){if(window.gitbook&&gitbook.events){gitbook.events.bind('page.change',ts);}document.addEventListener('DOMContentLoaded',ts);}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',bind);}else{bind();}})();</SCRIPTTAG>","<SCRIPTTAG>document.addEventListener('DOMContentLoaded',function(){var l=document.createElement('link');l.rel='stylesheet';l.href=new URL('styles.css', document.baseURI).toString();document.head.appendChild(l);});</SCRIPTTAG>"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"remove-honkit-footer":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"da","gitbook":"*"},"file":{"path":"EFFECTIVEMOISTURE.md","mtime":"2025-08-13T12:50:21.819Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-25T09:10:59.369Z"},"basePath":".","book":{"language":"da"}});
+            gitbook.page.hasChanged({"page":{"title":"TEST","level":"1.4.1","depth":2,"next":{"title":"TEST3","level":"1.4.1.1","depth":3,"path":"Diverse/test2.md","ref":"Diverse/test2.md","articles":[]},"previous":{"title":"Test_Anders","level":"1.4","depth":1,"path":"Moduler/20_04_Fugtbalancen_for_en_zone.md","ref":"Moduler/20_04_Fugtbalancen_for_en_zone.md","articles":[{"title":"TEST","level":"1.4.1","depth":2,"path":"EFFECTIVEMOISTURE.md","ref":"EFFECTIVEMOISTURE.md","articles":[{"title":"TEST3","level":"1.4.1.1","depth":3,"path":"Diverse/test2.md","ref":"Diverse/test2.md","articles":[]}]}]},"articles":[{"title":"TEST3","level":"1.4.1.1","depth":3,"path":"Diverse/test2.md","ref":"Diverse/test2.md","articles":[]}],"dir":"ltr"},"config":{"plugins":["remove-honkit-footer","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git","mathjax-fix","head-append"],"styles":{"website":"styles.css"},"pluginsConfig":{"mathjax-fix":{},"language-picker":{"grid-columns":3},"livereload":{},"head-append":{"code":["<SCRIPTTAG>window.MathJax = { tex: { inlineMath: [[\\\"\\\\\\(\\\",\\\"\\\\\\)\\\"],[\\\"$\\\",\\\"$\\\"]], displayMath: [[\\\"\\\\\\[\\\",\\\"\\\\\\]\\\"],[\\\"$$\\\",\\\"$$\\\"]], packages: {'[+]': ['ams']}, processEscapes: true }, options: { skipHtmlTags: [\\\"script\\\",\\\"noscript\\\",\\\"style\\\",\\\"textarea\\\",\\\"pre\\\",\\\"code\\\"] } };</SCRIPTTAG>","<SCRIPTTAG id=\"MathJax-script\" src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js\"></SCRIPTTAG>","<SCRIPTTAG>(function(){function cleanNBSP(root){var t=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null,false);var n;while((n=t.nextNode())){if(n.nodeValue.indexOf('\\u00A0')!==-1){n.nodeValue=n.nodeValue.replace(/\\u00A0/g,' ');}}}function ts(){if(window.MathJax&&window.MathJax.typesetPromise){cleanNBSP(document.body);return window.MathJax.typesetPromise();}}function bind(){if(window.gitbook&&gitbook.events){gitbook.events.bind('page.change',ts);}document.addEventListener('DOMContentLoaded',ts);}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',bind);}else{bind();}})();</SCRIPTTAG>","<SCRIPTTAG>document.addEventListener('DOMContentLoaded',function(){var l=document.createElement('link');l.rel='stylesheet';l.href=new URL('styles.css', document.baseURI).toString();document.head.appendChild(l);});</SCRIPTTAG>"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"remove-honkit-footer":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"da","gitbook":"*"},"file":{"path":"EFFECTIVEMOISTURE.md","mtime":"2025-08-13T12:50:21.819Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-26T09:01:55.369Z"},"basePath":".","book":{"language":"da"}});
         });
     </script>
 </div>
